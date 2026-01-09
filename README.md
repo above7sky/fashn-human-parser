@@ -37,6 +37,14 @@ The `predict` method accepts:
 img = cv2.cvtColor(cv2.imread("image.jpg"), cv2.COLOR_BGR2RGB)
 ```
 
+### Batch Processing
+
+```python
+# Process multiple images in a single forward pass
+results = parser.predict([image1, image2, image3])
+# results is a list of numpy arrays, one per image
+```
+
 ### Get Raw Logits
 
 ```python
@@ -93,6 +101,7 @@ print(LABELS_TO_IDS["top"])  # 3
 - Output matches input dimensions - no manual resizing needed
 - Returns parsed label IDs directly (not raw logits)
 - Accepts multiple input formats (file path, PIL, numpy)
+- Batch processing with single forward pass: `parser.predict([img1, img2, img3])`
 
 **Utility exports:**
 - `IDS_TO_LABELS` / `LABELS_TO_IDS` for label mapping
