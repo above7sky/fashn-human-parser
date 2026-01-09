@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fashn-human-parser"
+version = "0.1.0"
+description = "Human parsing model for fashion and virtual try-on applications"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "See LICENSE"}
+authors = [
+    {name = "FASHN AI", email = "dan@fashn.ai"},
+]
+keywords = [
+    "human-parsing",
+    "segmentation",
+    "fashion",
+    "virtual-try-on",
+    "deep-learning",
+    "computer-vision",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Image Processing",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "torch>=2.0",
+    "transformers>=4.30",
+    "opencv-python>=4.8",
+    "numpy>=1.20",
+    "pillow>=9.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/fashn-AI/fashn-human-parser"
+Documentation = "https://huggingface.co/fashn-ai/fashn-human-parser"
+Repository = "https://github.com/fashn-AI/fashn-human-parser"
+Issues = "https://github.com/fashn-AI/fashn-human-parser/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fashn_human_parser"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
