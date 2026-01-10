@@ -1,6 +1,7 @@
 # FASHN Human Parser
 
 [![Hugging Face Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/fashn-ai/fashn-human-parser)
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/fashn-ai/fashn-human-parser)
 
 A SegFormer-B4 model fine-tuned for human parsing with 18 semantic classes, optimized for fashion and virtual try-on applications.
 
@@ -157,4 +158,5 @@ This model inherits the [NVIDIA Source Code License for SegFormer](https://githu
 
 - [FASHN AI](https://fashn.ai/)
 - [HuggingFace Model](https://huggingface.co/fashn-ai/fashn-human-parser)
+- [HuggingFace Space (Demo)](https://huggingface.co/spaces/fashn-ai/fashn-human-parser)
 - [GitHub Repository](https://github.com/fashn-AI/fashn-human-parser)
