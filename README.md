@@ -16,6 +16,21 @@ This package provides the exact preprocessing used during model training for max
 pip install fashn-human-parser
 ```
 
+## Model Weights
+
+On first use, the model weights (~244 MB) are automatically downloaded from [HuggingFace Hub](https://huggingface.co/fashn-ai/fashn-human-parser) and cached locally.
+
+**Default cache location:**
+- Linux/macOS: `~/.cache/huggingface/hub/`
+- Windows: `C:\Users\<username>\.cache\huggingface\hub\`
+
+**To customize the cache location**, set the `HF_HOME` environment variable before running your script:
+
+```bash
+export HF_HOME=/path/to/custom/cache  # Linux/macOS
+set HF_HOME=C:\path\to\custom\cache   # Windows
+```
+
 ## Usage
 
 ```python
