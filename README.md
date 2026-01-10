@@ -155,5 +155,6 @@ This model inherits the [NVIDIA Source Code License for SegFormer](https://githu
 
 ## Links
 
+- [FASHN AI](https://fashn.ai/)
 - [HuggingFace Model](https://huggingface.co/fashn-ai/fashn-human-parser)
 - [GitHub Repository](https://github.com/fashn-AI/fashn-human-parser)
