@@ -19,6 +19,9 @@ env/
 .vscode/
 *.swp
 
+# macOS
+.DS_Store
+
 # Testing
 .pytest_cache/
 .coverage

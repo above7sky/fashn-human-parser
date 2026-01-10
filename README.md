@@ -1,8 +1,14 @@
 # FASHN Human Parser
 
+[![Hugging Face Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/fashn-ai/fashn-human-parser)
+
 A SegFormer-B4 model fine-tuned for human parsing with 18 semantic classes, optimized for fashion and virtual try-on applications.
 
-This package provides the exact preprocessing used during model training for maximum accuracy. For quick experimentation, you can also use the model directly via [HuggingFace Hub](https://huggingface.co/fashn-ai/fashn-human-parser).
+<p align="center">
+  <img src="assets/example.webp" alt="Human Parsing Example" width="800">
+</p>
+
+This package provides the exact preprocessing used during model training for maximum accuracy. For quick experimentation, you can also use the model directly via [HuggingFace](https://huggingface.co/fashn-ai/fashn-human-parser).
 
 ## Installation
 
@@ -113,6 +119,20 @@ print(LABELS_TO_IDS["top"])  # 3
 - Matches the exact preprocessing from model training
 
 The HuggingFace Hub version uses PIL LANCZOS resampling for broader compatibility, which may result in slightly different outputs.
+
+## Using with HuggingFace
+
+You can also use the model directly via the HuggingFace pipeline:
+
+```python
+from transformers import pipeline
+
+pipe = pipeline("image-segmentation", model="fashn-ai/fashn-human-parser")
+result = pipe("image.jpg")
+# result is a list of dicts with 'label', 'score', 'mask' for each detected class
+```
+
+**Note:** The pipeline returns per-class masks. This package returns a single segmentation map with class IDs.
 
 ## License
 
