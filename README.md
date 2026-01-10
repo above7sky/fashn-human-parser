@@ -5,7 +5,7 @@
 A SegFormer-B4 model fine-tuned for human parsing with 18 semantic classes, optimized for fashion and virtual try-on applications.
 
 <p align="center">
-  <img src="assets/example.webp" alt="Human Parsing Example" width="800">
+  <img src="https://static.fashn.ai/repositories/fashn-human-parser/example.webp" alt="Human Parsing Example" width="800">
 </p>
 
 This package provides the exact preprocessing used during model training for maximum accuracy. For quick experimentation, you can also use the model directly via [HuggingFace](https://huggingface.co/fashn-ai/fashn-human-parser).
